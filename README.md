@@ -4,7 +4,7 @@
 > 状态：**两款游戏都已实机验证可用** —— 对话、主菜单、状态页、书籍页、字幕、体感设置页全部正常。
 > 交付日期：2026-10-28 ｜ 文档整理：2026-10-30
 > 写给谁：先写给我自己 —— 半年后忘了当初为什么这么改时，能查回来；也写给想做同类移植的人。
-> 只想玩、不想看技术细节：**[文末有下载](#赞赏与下载)**（Gothic 1 汉化 MOD，G2 稍后）。
+> 只想玩、不想看技术细节：**[文末有下载](#礼得清赞赏与下载)**（Gothic 1 汉化 MOD，G2 稍后）。
 
 **TL;DR（英文摘要）**
 We localized two Nintendo Switch ports of *Gothic* (a 2001-era engine, `_work/DATA` script assets, ZenKit-compatible `.DAT`/`.VDF` containers) into Simplified Chinese. The engine's `zCFont` hard-codes **256 glyphs indexed by a single byte**, which structurally cannot hold Chinese, so we binary-patched the game code itself: **121 patch sites in Gothic 1 (ARM32/A32)** and a separate patch set for **Gothic 2 v1.0.3 (AArch64)** — glyph indices widened to 16 bits, all inlined text-measurement loops rewritten to match, plus a custom 16-bit-LE text encoding that keeps ASCII mixed in at 8 bits. Fonts, script containers and cutscene subtitles were rebuilt byte-in-place (the `.VDF` container format refuses any restructuring). Both titles ship as a LayeredFS MOD *and* as a standalone slimmed NSP (Gothic 1: 3.34 GB → 1.51 GB, −55%; Gothic 2: ~11 GB → 4.25 GB, −58%).
@@ -98,11 +98,11 @@ Gothic 是 2001 年的 RPG，Switch 版把两代都带上了掌机，唯独没�
 16. [附录 B：常量与术语表](#附录-b常量与术语表)
 17. [附录 C：复现指引](#附录-c复现指引)
 
-→ 文末：[小程序「礼得清」](#我做的另一个小程序礼得清) ｜ [赞赏与下载](#赞赏与下载) ｜ [许可与免责](#许可与免责)
+→ 文末：[礼得清、赞赏与下载](#礼得清赞赏与下载) ｜ [许可与免责](#许可与免责)
 
 **怎么读这份记录**
 
-- 只想装上玩 → 直接跳[文末下载](#赞赏与下载)
+- 只想装上玩 → 直接跳[文末下载](#下载gothic-1-汉化-mod2026-10-28-定版)
 - 想知道是怎么改出来的 → 第 3～6 节（引擎 / 字体 / 文本 / 图标）
 - 想自己复刻一版 → 第 7 节流水线 + 附录 C
 - 想避开我踩过的坑 → 第 10、11 节（25 条硬结论 + 10 条黑名单）
@@ -624,7 +624,7 @@ v2 相对首版的 4 项变更：① 修书籍闪退（静态数据存链接期�
 
 ---
 
-## 我做的另一个小程序「礼得清」
+## 礼得清、赞赏与下载
 
 汉化之外，我还做了个小程序，叫「礼得清」，专门记人情往来：随出去的、收进来的分开记，一场红白喜事一个账本；长辈那本红纸老礼簿拍张照就能录进去，几百号人的名单几分钟；完全离线，不登录、不上传，数据只在你本机。卖点就一句 —— **它替你记住"当年他随了多少"**。
 
@@ -635,10 +635,6 @@ v2 相对首版的 4 项变更：① 修书籍闪退（静态数据存链接期�
 **如果你觉得这份汉化还算有用，我最想要的回礼不是钱 —— 是去点一下它、用一下它。** 打开看看，顺手把家里那本老礼簿拍进去，或者转给正在为随礼发愁的人。没人用的小程序，做得再干净也只是个摆设；有人真的在用、留一句"这里不好用"，我才知道下一步该改什么。
 
 做它的过程我写在公众号「墨序堂」这篇里：[《礼得清诞生记》](https://mp.weixin.qq.com/s/ITYVwoC0xs7rwBIQGV1j1w)；意见、bug 也可以在那篇下面留 —— 是同一个我，回了就有人改。
-
----
-
-## 赞赏与下载
 
 ### 赞赏：纯属自愿
 
