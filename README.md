@@ -102,7 +102,7 @@ Gothic 是 2001 年的 RPG，Switch 版把两代都带上了掌机，唯独没�
 
 **怎么读这份记录**
 
-- 只想装上玩 → 直接跳[文末下载](#下载gothic-1-汉化-mod2026-10-28-定版)
+- 只想装上玩 → 直接跳[文末下载](#礼得清赞赏与下载)
 - 想知道是怎么改出来的 → 第 3～6 节（引擎 / 字体 / 文本 / 图标）
 - 想自己复刻一版 → 第 7 节流水线 + 附录 C
 - 想避开我踩过的坑 → 第 10、11 节（25 条硬结论 + 10 条黑名单）
@@ -685,20 +685,21 @@ v2 相对首版的 4 项变更：① 修书籍闪退（静态数据存链接期�
 | --- | --- |
 | <img src="images/sponsor-wx.png" alt="微信支付收款码" width="260" /> | <img src="images/sponsor-alipay.jpg" alt="支付宝收款码" width="260" /> |
 
-### 下载：Gothic 1 汉化 MOD（2026-10-28 定版）
+### 下载：Gothic 1 汉化 MOD### 下载：Gothic 1 汉化 MOD（1.0.1 字体定版 · 2026-11-12）
 
-| 包 | 大小 | MD5 |
+> ⚠️ **前提：主机必须已安装官方 1.0.1 更新**（主界面选中游戏按 + → 软件信息，版本应显示 1.0.1）。本版 `exefs/main` 为 1.0.1 专用，装在 1.0.0 上会黑屏 0 FPS。
+
+| 包 | 大小 | 校验 |
 | --- | --- | --- |
-| [`gothic1_zh_mod_zh_en_20261028.zip`](https://github.com/007twenty/gothic-switch-zh/releases/download/g1-20261028/gothic1_zh_mod_zh_en_20261028.zip) | 88,484,930 B（解压 248.9 MiB / 10 个文件） | `99a63778f9993aad3eb6a21e3214d2bc` |
+| [`gothic1_zh_mod_101_20261112.7z`](https://github.com/007twenty/gothic-switch-zh/releases/download/g1-1.0.1-20261112/gothic1_zh_mod_101_20261112.7z) | 80,091,455 B（解压 420.8 MiB / 8 个文件） | MD5 `a776bad70ef397876e7407d86674b9be`<br>SHA256 `ec16be276313d54440397eb89d4a00456a7f4586077b53967bf7ebd542fe0563` |
 
-- **发布页**：[Releases · g1-20261028](https://github.com/007twenty/gothic-switch-zh/releases/tag/g1-20261028)
-- **装法**：解压 → 把里面 `G1_汉化_SD_精简/atmosphere` 整个目录复制到 SD 卡根目录（合并）→ 启动游戏。不改动游戏本体，删掉即恢复原样。
-- **包里有什么**：`exefs/main`（121 处指令补丁 + 46 个字距跳板）+ 字体 VDF（A 组 `gh=50`）+ `SCRIPTS_EN` / `SCRIPTS_DE` 两套 `GOTHIC.DAT` / `MENU.DAT` / `OU.BIN` + `Textures.vdf` / `Textures_NX.vdf`。
-- 只含改动文件，不含完整游戏；需要合法的游戏副本。
-- **暂时只放 Gothic 1**，G2 稍后放。
-- ⚠️ 仓库现在是私有的，这条链接**只有已登录且有权限的账号**才能下载；要给其他人下载，得先把仓库或 Release 公开（公开前先读第 14 节）。
-
-写到这里其实就一句话：这两件事是同一件事 —— **把没人愿意收拾的乱账收拾干净**。游戏里那笔，我用两百多处指令级补丁理清了；人情那笔，交给「礼得清」。
+- **发布页**：[Releases · g1-1.0.1-20261112](https://github.com/007twenty/gothic-switch-zh/releases/tag/g1-1.0.1-20261112)（含包内 8 文件的逐项 md5）
+- **旧版**：[g1-20261028](https://github.com/007twenty/gothic-switch-zh/releases/tag/g1-20261028)（2026-10-28 定版，仍保留；新装请用上面的 1.0.1 版）
+- **装法**：解压 7z → 得到 `G1_中文MOD_1.0.1_字体定版_20261112/atmosphere` → 把整个 `atmosphere` 目录复制到 SD 卡**根目录**（同名目录合并覆盖）→ 启动游戏。不改动游戏本体，删掉即恢复原样。
+- **包里有什么**：共 8 文件 —— `exefs/main`（v20261112.1 字体定版，主机档字距 0.90 → 0.85、掌机档回原生）+ `Textures.vdf` / `Textures_NX.vdf` / `textures_font_cp1252.vdf` / `Patch0.vdf`（中文控制器映射页）+ `SCRIPTS_EN` 的 `GOTHIC.DAT` / `MENU.DAT` / `OU.BIN`；不含 `atmosphere/config/system_settings.ini` 日志开关。
+- **相对旧版**：只换 `exefs/main`（`7F2C5ED2…` → `FA94A043…`），romfs 八件与 v6 逐字节一致；不再附德文槽 `SCRIPTS_DE`。
+- 只含改动文件，不含完整游戏；需要合法的游戏副本。**暂时只放 Gothic 1**，G2 稍后放。
+- ⚠️ 本仓库与 Release 现为公开状态；下载与转发前请先读第 14 节关于公开分发的说明。 —— **把没人愿意收拾的乱账收拾干净**。游戏里那笔，我用两百多处指令级补丁理清了；人情那笔，交给「礼得清」。
 
 ---
 
